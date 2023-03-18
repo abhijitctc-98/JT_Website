@@ -12,26 +12,31 @@
                 <div class="text-white m-6 text-xl z-200"> Contact Us </div>
                 <div class="text-white m-6 z-200"> We are always here to help out whatever way we can :) </div>
                 <div class="text-white m-6 z-200">
-                    <form>
+                    <form [formGroup]="contactForm" (ngSubmit)="contactSub(contactForm.value)">
                     <div class="flex m-2">
+                        <fa-icon [icon]="faUser" class="m-2"></fa-icon>
                          <input placeholder="Name"
-                            class="bg-gray-800 p-2 rounded-3xl">
+                            class="bg-gray-800 p-2 rounded-3xl" formControlName="studName">
                     </div>
                     <div class="flex m-2">
+                        <fa-icon [icon]="faMailBulk" class="m-2"></fa-icon>
                        <input placeholder="E-mail"
-                            class="bg-gray-800 p-2 rounded-3xl">
+                            class="bg-gray-800 p-2 rounded-3xl" formControlName="studEmailID">
                     </div>
                     <div class="flex m-2">
+                        <fa-icon [icon]="faPhone" class="m-2"></fa-icon>
                        <input placeholder="Phone"
-                            class="bg-gray-800 p-2 rounded-3xl">
+                            class="bg-gray-800 p-2 rounded-3xl" formControlName="studPhone">
                     </div>
                     <div class="flex m-2">
+                        <fa-icon [icon]="faFacebookMessenger" class="m-2"></fa-icon>
                          <input
-                            placeholder="Type your message" class="bg-gray-800 p-2 rounded-3xl">
+                            placeholder="Type your message" class="bg-gray-800 p-2 rounded-3xl" formControlName="studMessage">
                     </div>
                     <div class="block m-2justify-center">
                         <div class="bg-blue-700 p-2 rounded-3xl hover:bg-blue-800 cursor-pointer ">
-                            <div class="flex justify-center"> Send </div>
+                            <button class="flex justify-center hover:text-yellow-300 cursor-pointer" type="submit">SUBMIT</button>
+                            <!-- <div class="flex justify-center hover:text-yellow-300 cursor-pointer" type="submit"> Send </div> -->
                         </div>
                     </div>
                     </form>

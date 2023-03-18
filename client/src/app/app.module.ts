@@ -10,7 +10,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
-
+import { ReactiveFormsModule } from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

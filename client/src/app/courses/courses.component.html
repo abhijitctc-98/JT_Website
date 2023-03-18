@@ -16,7 +16,7 @@
                     <div class="text-3xl md:text-5xl">6.99</div>
                     <div class="text-lg md:text-xl mt-[9px] md:mt-[20px]">/course</div>
                 </div>
-                <button class="px-8 py-1 rounded-3xl font-medium bg-white text-stone-900 hover:bg-gray-100 cursor-pointer">Order Now</button>
+                <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="px-8 py-1 rounded-3xl font-medium bg-white text-stone-900 hover:bg-gray-100 cursor-pointer">Order Now</button>
                 <div
                     class="text-white text-sm my-4 border-t border-white flex flex-col justify-center items-center h-60">
                     <div class="m-1">All basic features</div>
@@ -35,7 +35,7 @@
                 </div>
                 <!-- <div class="px-8 py-1 rounded-3xl font-medium bg-white text-stone-900 hover:bg-gray-100 cursor-pointer">
                     <a href="">Order Now</a></div> -->
-                <button class="px-8 py-1 rounded-3xl font-medium bg-white text-stone-900 hover:bg-gray-100 cursor-pointer">Order Now</button>    
+                <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="px-8 py-1 rounded-3xl font-medium bg-white text-stone-900 hover:bg-gray-100 cursor-pointer">Order Now</button>    
                 <div
                     class="text-white text-sm my-4 border-t border-white flex flex-col justify-center items-center h-60">
                     <div class="m-1">All basic features</div>
@@ -55,7 +55,7 @@
                     <div class="text-3xl md:text-5xl">9.99</div>
                     <div class="text-lg md:text-xl mt-[9px] md:mt-[20px]">/course</div>
                 </div>
-                <button class="px-8 py-1 rounded-3xl font-medium bg-white text-stone-900 hover:bg-gray-100 cursor-pointer">Order Now</button>
+                <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="px-8 py-1 rounded-3xl font-medium bg-white text-stone-900 hover:bg-gray-100 cursor-pointer">Order Now</button>
                 <div
                     class="text-white text-sm my-4 border-t border-white flex flex-col justify-center items-center h-60">
                     <div class="m-1">All basic features</div>
@@ -73,4 +73,59 @@
     </div>
 
     <script src="https://cdn.tailwindcss.com"></script>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Course Registration</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-black">
+            <div class="text-white m-6 z-200">
+                <form class=" " [formGroup]="courseForm" (ngSubmit)="courseSub(courseForm.value)">
+   
+                <div class="flex m-2">
+                    <fa-icon [icon]="faUser" class="m-2"></fa-icon>
+                     <input placeholder="Name"
+                        class="bg-gray-800 p-2 rounded-3xl" formControlName="studName">
+                </div>
+                <div class="flex m-2">
+                    <fa-icon [icon]="faMailBulk" class="m-2"></fa-icon>
+                   <input placeholder="E-mail"
+                        class="bg-gray-800 p-2 rounded-3xl" formControlName="studEmailID">
+                </div>
+                <div class="flex m-2">
+                    <fa-icon [icon]="faPhone" class="m-2"></fa-icon>
+                   <input placeholder="Phone"
+                        class="bg-gray-800 p-2 rounded-3xl" formControlName="studPhone">
+                </div>
+                <div class="flex m-2">
+                    <fa-icon [icon]="faUniversity" class="m-2"></fa-icon>
+                   <input placeholder="College"
+                        class="bg-gray-800 p-2 rounded-3xl" formControlName="studCollege">
+                </div>
+                <div class="flex m-2">
+                    <fa-icon [icon]="faBook" class="m-2"></fa-icon>
+                   <input placeholder="Course"
+                        class="bg-gray-800 p-2 rounded-3xl" formControlName="studCourse">
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button> -->
+                    <div class="block m-2justify-center">
+                        <div class="bg-blue-700 p-2 rounded-3xl hover:bg-blue-800 cursor-pointer ">
+                            <button class="flex justify-center hover:text-yellow-300 cursor-pointer" type="submit" data-bs-dismiss="modal">SUBMIT</button>
+                        </div>
+                    </div>
+                  </div>
+                </form>
+
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
