@@ -3,36 +3,30 @@
                 <div class="flex justify-between items-center text-gray-700">
                         <div class="mx-2 my-4 ">
                                 <h1 class="uppercase text-3xl font-bold text-stone-900 text-center md:-ml-24">JT</h1>
-                                <!-- <ion-icon name="logo-pwa" class="text-5xl text-blue-600 hover:text-stone-600"></ion-icon> -->
                         </div>
                         <ul class="hidden md:flex items-center text-[18px] font-semibold pr-10 mt-2 text-gray-300/80">
-                                <li
-                                        class=" text-stone-600 hover:text-orange-600 hover:font-bold font-medium mx-4 my-1">
-                                        <i class="fa fa-chevron-right text-orange-400"></i>
+                                <li class=" text-stone-600 hover:text-orange-600 hover:font-bold font-medium mx-4 my-1">
+                                        <fa-icon [icon]="faHome"></fa-icon>
                                         <p class="text-gray-800/70 text-base hover:text-yellow-300 cursor-pointer"
                                                 routerLink="/home"> Home </p>
                                 </li>
-                                <li
-                                        class=" text-stone-600 hover:text-orange-600 hover:font-bold font-medium mx-4 my-1">
-                                        <i class="fa fa-chevron-right text-orange-400"></i>
+                                <li class=" text-stone-600 hover:text-orange-600 hover:font-bold font-medium mx-4 my-1">
+                                        <fa-icon [icon]="faInfoCircle"></fa-icon>
                                         <p class="text-gray-800/70 text-base hover:text-yellow-300 cursor-pointer"
                                                 routerLink="/about"> About Us </p>
                                 </li>
-                                <li
-                                class=" text-stone-600 hover:text-orange-600 hover:font-bold font-medium mx-4 my-1">
-                                <i class="fa fa-chevron-right text-orange-400"></i>
-                                <p class="text-gray-800/70 text-base hover:text-yellow-300 cursor-pointer"
-                                        routerLink="/team"> Our Team </p>
-                                </li>   
-                                <li
-                                        class=" text-stone-600 hover:text-orange-600 hover:font-bold font-medium mx-4 my-1">
-                                        <i class="fa fa-chevron-right text-orange-400"></i>
+                                <li class=" text-stone-600 hover:text-orange-600 hover:font-bold font-medium mx-4 my-1">
+                                        <fa-icon [icon]="faPeopleArrows"></fa-icon>
+                                        <p class="text-gray-800/70 text-base hover:text-yellow-300 cursor-pointer"
+                                                routerLink="/team"> Our Team </p>
+                                </li>
+                                <li class=" text-stone-600 hover:text-orange-600 hover:font-bold font-medium mx-4 my-1">
+                                        <fa-icon [icon]="faBookOpen"></fa-icon>
                                         <p class="text-gray-800/70 text-base hover:text-yellow-300 cursor-pointer"
                                                 routerLink="/courses"> Courses </p>
                                 </li>
-                                <li
-                                        class=" text-stone-600 hover:text-orange-600 hover:font-bold font-medium mx-4 my-1">
-                                        <i class="fa fa-chevron-right text-orange-400"></i>
+                                <li class=" text-stone-600 hover:text-orange-600 hover:font-bold font-medium mx-4 my-1">
+                                        <fa-icon [icon]="faPhone"></fa-icon>
                                         <p class="text-gray-800/70 text-base hover:text-yellow-300 cursor-pointer"
                                                 routerLink="/contact"> Contact Us </p>
                                 </li>
@@ -41,6 +35,7 @@
 
         </div>
 </div>
+
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
